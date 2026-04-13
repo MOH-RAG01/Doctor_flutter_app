@@ -13,7 +13,8 @@ class AppTextFormField extends StatelessWidget {
   final InputBorder? focusedBorder;
   final bool? obscureText;
   final VoidCallback? onTap;
-
+  final TextEditingController? controller;
+  final Function(String?) validator;
   const AppTextFormField({
     super.key,
     this.contentPadding,
@@ -25,11 +26,15 @@ class AppTextFormField extends StatelessWidget {
     this.obscureText,
     this.hintStyle,
     this.onTap,
+    this.controller,
+    required this.validator,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
+      validator: (value) => validator(value),
       obscureText: obscureText ?? false,
       decoration: InputDecoration(
         fillColor: backgroundColor ?? AppColors.darkerWhite,
@@ -48,6 +53,14 @@ class AppTextFormField extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16.r),
           borderSide: BorderSide(color: AppColors.primaryBlue),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.r),
+          borderSide: BorderSide(color: Colors.red),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.r),
+          borderSide: BorderSide(color: Colors.red),
         ),
       ),
     );
