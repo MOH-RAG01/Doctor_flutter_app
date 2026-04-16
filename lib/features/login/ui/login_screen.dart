@@ -1,14 +1,11 @@
-import 'package:doctor/core/theming/app_colors.dart';
 import 'package:doctor/core/theming/app_fonts.dart';
 import 'package:doctor/core/widgets/app_text_button.dart';
-import 'package:doctor/core/widgets/app_text_form_field.dart';
 import 'package:doctor/features/login/data/models/login_request_body.dart';
 import 'package:doctor/features/login/logic/cubit/login_cubit.dart';
-import 'package:doctor/features/login/ui/widgets/already_have_an_acc.dart';
+import 'package:doctor/features/login/ui/widgets/dont_have_acc.dart';
 import 'package:doctor/features/login/ui/widgets/email_and_password.dart';
 import 'package:doctor/features/login/ui/widgets/login_bloc_listener.dart';
-import 'package:doctor/features/login/ui/widgets/password_validations.dart';
-import 'package:doctor/features/login/ui/widgets/terms_and_conditions_text.dart';
+import 'package:doctor/core/widgets/terms_and_conditions_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -58,7 +55,7 @@ class LoginScreen extends StatelessWidget {
                     Gap(45.h),
                     TermsAndConditionsText(),
                     Gap(25.h),
-                    AlreadyHaveAnAcc(),
+                    CreateAcc(),
                     Gap(7.h),
 
                     LoginBlocListener(),
