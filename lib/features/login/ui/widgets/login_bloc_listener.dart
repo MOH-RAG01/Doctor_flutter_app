@@ -33,9 +33,9 @@ class _LoginBlocListenerState extends State<LoginBlocListener> {
           },
           failure: (message) {
             context.pop();
-            ScaffoldMessenger.of(
-              context,
-            ).showSnackBar(SnackBar(content: Text(message)));
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text(message), backgroundColor: Colors.red),
+            );
           },
         );
       },

@@ -15,6 +15,7 @@ class AppTextFormField extends StatelessWidget {
   final VoidCallback? onTap;
   final TextEditingController? controller;
   final Function(String?) validator;
+  final TextInputType? keyboardtype;
   const AppTextFormField({
     super.key,
     this.contentPadding,
@@ -28,11 +29,13 @@ class AppTextFormField extends StatelessWidget {
     this.onTap,
     this.controller,
     required this.validator,
+    this.keyboardtype,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: keyboardtype,
       controller: controller,
       validator: (value) => validator(value),
       obscureText: obscureText ?? false,
