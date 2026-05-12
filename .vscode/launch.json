@@ -13,22 +13,6 @@
             "type": "dart",
             "args": ["--flavor", "production"]
         },
-        {
-            "name": "doctor",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "doctor (profile mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "doctor (release mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        }
+
     ]
 }
