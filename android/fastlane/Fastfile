@@ -1,0 +1,27 @@
+default_platform(:android)
+
+platform :android do
+  desc "Firebase App Distribution lane For Android"
+  lane :firebase_distribution do
+    sh "flutter clean"
+    sh "cd .. && .\\gradlew.bat --stop"
+    sh "flutter build apk --flavor production"
+    HTTPClient.class_eval do
+      alias_method :orig_initialize, :initialize
+      def initialize(*args, &block)
+        orig_initialize(*args, &block)
+        self.send_timeout    = 1200
+        self.receive_timeout = 1200
+        self.connect_timeout = 60
+      end
+    end
+    firebase_app_distribution(
+      app: "1:37537672923:android:678de362cc57aa50fce6fe",
+      firebase_cli_token: "",
+      android_artifact_type: "APK",
+      android_artifact_path: "../build/app/outputs/flutter-apk/app-production-release.apk",
+      testers: "learningtest06@gmail.com",
+      release_notes: "first time upload from fastlane"
+    )
+  end
+end
