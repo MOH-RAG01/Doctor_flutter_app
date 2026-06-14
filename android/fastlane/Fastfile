@@ -4,8 +4,6 @@ platform :android do
   desc "Firebase App Distribution lane For Android"
   lane :firebase_distribution do
     sh "flutter clean"
-    sh "cd .. && .\\gradlew.bat --stop"
-    sh "cd .. && ./gradlew --stop"
     sh "flutter build apk --flavor production"
     HTTPClient.class_eval do
       alias_method :orig_initialize, :initialize
@@ -18,7 +16,7 @@ platform :android do
     end
     firebase_app_distribution(
       app: "1:37537672923:android:678de362cc57aa50fce6fe",
-firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
+      firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
       android_artifact_type: "APK",
       android_artifact_path: "../build/app/outputs/flutter-apk/app-production-release.apk",
       testers: "learningtest06@gmail.com",
