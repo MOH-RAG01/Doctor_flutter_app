@@ -5,6 +5,7 @@ platform :android do
   lane :firebase_distribution do
     sh "flutter clean"
     sh "cd .. && .\\gradlew.bat --stop"
+    sh "cd .. && ./gradlew --stop"
     sh "flutter build apk --flavor production"
     HTTPClient.class_eval do
       alias_method :orig_initialize, :initialize
