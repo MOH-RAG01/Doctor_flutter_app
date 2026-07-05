@@ -9,7 +9,7 @@ class DoctorBlueContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 210.h,
+      height: 206.h,
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
@@ -38,7 +38,7 @@ class DoctorBlueContainer extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       "Find Nearby",
-                      style: AppFontsStyle.font13BlueRegular,
+                      style: AppFontsStyle.font12BlueRegular,
                     ),
                   ),
                 ),
