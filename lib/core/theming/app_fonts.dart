@@ -24,13 +24,33 @@ class AppFontsStyle {
     color: AppColors.primaryBlue,
     fontWeight: AppFontWieghtHelper.regular,
   );
+  static TextStyle font12BlueRegular = TextStyle(
+    fontSize: 12.sp,
+    color: AppColors.primaryBlue,
+    fontWeight: AppFontWieghtHelper.regular,
+  );
+  static TextStyle font12DarkBlueRegular = TextStyle(
+    fontSize: 12.sp,
+    color: AppColors.darkBlue,
+    fontWeight: AppFontWieghtHelper.regular,
+  );
   static TextStyle font13GreyRegular = TextStyle(
     fontSize: 13.sp,
     color: AppColors.grey,
     fontWeight: AppFontWieghtHelper.regular,
   );
+  static TextStyle font12GreyMedium = TextStyle(
+    fontSize: 12.sp,
+    color: AppColors.grey,
+    fontWeight: AppFontWieghtHelper.medium,
+  );
   static TextStyle font16WhiteMedium = TextStyle(
     fontSize: 16.sp,
+    color: Colors.white,
+    fontWeight: AppFontWieghtHelper.medium,
+  );
+  static TextStyle font18WhiteMedium = TextStyle(
+    fontSize: 18.sp,
     color: Colors.white,
     fontWeight: AppFontWieghtHelper.medium,
   );
@@ -58,5 +78,15 @@ class AppFontsStyle {
     fontSize: 14.sp,
     color: AppColors.darkBlue,
     fontWeight: AppFontWieghtHelper.medium,
+  );
+  static TextStyle font18DarkBlueMedium = TextStyle(
+    fontSize: 18.sp,
+    color: AppColors.darkBlue,
+    fontWeight: AppFontWieghtHelper.semiBold,
+  );
+  static TextStyle font16DarkBlueBold = TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.darkBlue,
+    fontWeight: AppFontWieghtHelper.bold,
   );
 }
