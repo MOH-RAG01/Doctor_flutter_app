@@ -34,6 +34,11 @@ class AppFontsStyle {
     color: Colors.white,
     fontWeight: AppFontWieghtHelper.medium,
   );
+  static TextStyle font18WhiteMedium = TextStyle(
+    fontSize: 18.sp,
+    color: Colors.white,
+    fontWeight: AppFontWieghtHelper.medium,
+  );
   static TextStyle font16WhiteSemiBold = TextStyle(
     fontSize: 16.sp,
     color: Colors.white,
