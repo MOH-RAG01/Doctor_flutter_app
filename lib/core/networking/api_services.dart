@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:doctor/core/networking/api_constants.dart';
+import 'package:doctor/features/home/data/models/specialization_response.dart';
 import 'package:doctor/features/login/data/models/login_request_body.dart';
 import 'package:doctor/features/login/data/models/login_response.dart';
 import 'package:doctor/features/signUp/data/models/signup_response_body.dart';
@@ -14,8 +15,12 @@ abstract class ApiServices {
 
   @POST(ApiConstants.loginEndpoint)
   Future<LoginResponse> login(@Body() LoginRequestBody loginRequestBody);
+
   @POST(ApiConstants.registerEndpoint)
   Future<SignupResponseBody> register(
     @Body() SignupResuestBody signupResuestBody,
   );
+
+  @GET(ApiConstants.specializationEndpoint)
+  Future<SpecializationResponse> getSpecialization();
 }
