@@ -18,7 +18,7 @@ void main() async {
 }
 
 Future<bool> checkLoggedUser() async {
-  String? userToken = await SharedPrefHelper.getStringData(
+  String? userToken = await SharedPrefHelper.getSecureData(
     SharedPrefKeys.userToken,
   );
 
